@@ -1,0 +1,16 @@
+name: autoProfile
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+
+jobs:
+  autoProfile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get Profile File
+        run: |
+          cd Profiles
+          curl -o Outbound.conf https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Outbound.conf
