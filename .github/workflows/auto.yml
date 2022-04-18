@@ -15,7 +15,7 @@ jobs:
       run: |
         curl -o Outbound.conf https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Outbound.conf
         cp Outbound.conf profiles.conf
-        sed -i 's/;running_mode_trigger=filter, filter, LINK_22E171:all_proxy, LINode_trigger=filter, filter, LY-Dormitory:all_direct, LY-Office:all_direct/' profiles.conf        
+        sed -i 's/;running_mode_trigger=filter, filter, LINK_22E171:all_proxy, LINode_trigger=filter, filter, LY-Dormitory:all_direct, LY-Office:all_direct/q' profiles.conf        
         
     - name: Commit files
       run: |
