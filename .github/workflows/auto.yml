@@ -15,7 +15,7 @@ jobs:
       run: |
         curl -o Outbound.conf https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Outbound.conf
         time=$(date "+%Y%m%d-%H%M%S")
-        echo "\n${time}" >> Outbound.conf
+        sed -i '$a ${time}' Outbound.conf
     - name: Commit files
       run: |
         git add .
