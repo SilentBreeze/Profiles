@@ -14,8 +14,8 @@ jobs:
     - name: Get Profile File
       run: |
         curl -o Outbound.conf https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Outbound.conf
-        time=$(date "+%Y%m%d-%H%M%S")
-        sed -i '$a ${time}' Outbound.conf
+        sed -i '/[general]/ a\running_mode_trigger=filter, filter, LY-Dormitory:all_direct, LY-Office:all_direct' Outbound.conf
+        
     - name: Commit files
       run: |
         git add .
