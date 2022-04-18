@@ -15,6 +15,8 @@ jobs:
       run: |
         curl -o Outbound.conf https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Outbound.conf
         cp Outbound.conf profiles.conf
+        var = '#$(date -u "+%Y-%m-%dT%H:%M:%SZ")'
+        sed -i "1a\\$var" profiles.conf
         sed -i 's/;running_mode_trigger=filter, filter, LINK_22E171:all_proxy, LINK_22E172:all_direct/running_mode_trigger=filter, filter, LY-Dormitory:all_direct, LY-Office:all_direct/' profiles.conf        
         sed -i 's/;no-system/no-system/' profiles.conf
         sed -i 's/no-ipv6/;no-ipv6/' profiles.conf
