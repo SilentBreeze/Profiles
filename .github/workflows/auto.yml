@@ -1,6 +1,7 @@
 name: autoProfile
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 20 * * *"
 
@@ -12,5 +13,6 @@ jobs:
 
       - name: Get Profile File
         run: |
+          ls
           cd Profiles
           curl -o Outbound.conf https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Outbound.conf
