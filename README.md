@@ -1,3 +1,3 @@
 # Profiles
 
-自用Profiles，修改自 DivineEngine
+自用Profiles，引用自 Loyalsoldier
