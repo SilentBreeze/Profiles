@@ -1,3 +1,4 @@
 payload:
   - '+.sciencedirect.com'
   - '+.jsdelivr.net'
+  - '+.apple.com'
