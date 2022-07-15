@@ -4,3 +4,4 @@ payload:
   - '+.apple.com'
   - '+.cdn-apple.com'
   - '+.webofscience.com'
+  - '+.overleaf.com'
