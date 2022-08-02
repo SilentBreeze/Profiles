@@ -5,3 +5,4 @@ payload:
   - '+.cdn-apple.com'
   - '+.webofscience.com'
   - '+.overleaf.com'
+  - 'pubs.acs.org'
