@@ -6,3 +6,5 @@ payload:
   - '+.webofscience.com'
   - '+.overleaf.com'
   - 'pubs.acs.org'
+  - 'myiopscience.iop.org'
+
