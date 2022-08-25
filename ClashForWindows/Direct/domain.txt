@@ -7,5 +7,5 @@ payload:
   - '+.overleaf.com'
   - 'pubs.acs.org'
   - 'myiopscience.iop.org'
-  - 'msftconnecttest.com'
+  - '+.msftconnecttest.com'
 
