@@ -8,4 +8,4 @@ payload:
   - 'pubs.acs.org'
   - 'myiopscience.iop.org'
   - '+.msftconnecttest.com'
-
+  - '+.microsoft.com'
