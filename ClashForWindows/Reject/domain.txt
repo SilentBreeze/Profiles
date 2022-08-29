@@ -1,2 +1,5 @@
 payload:
   - '+.miaozhen.com'
+  - '+.cupid.iqiyi.com'
+  - 'msg.qy.net'
+  - '+.iqiyipic.com'
