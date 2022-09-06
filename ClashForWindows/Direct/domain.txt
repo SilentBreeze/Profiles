@@ -1,10 +1,6 @@
 payload:
   - '+.sciencedirect.com'
-  - '+.jsdelivr.net'
-  - '+.apple.com'
-  - '+.cdn-apple.com'
   - '+.webofscience.com'
-  - '+.overleaf.com'
   - 'pubs.acs.org'
   - 'myiopscience.iop.org'
   - '+.msftconnecttest.com'
