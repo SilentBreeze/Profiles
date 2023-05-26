@@ -5,3 +5,5 @@ payload:
   - 'myiopscience.iop.org'
   - '+.msftconnecttest.com'
   - '+.microsoft.com'
+  - 'seed-sequoia.siri.apple.com'
+  - 'sequoia.apple.com'
