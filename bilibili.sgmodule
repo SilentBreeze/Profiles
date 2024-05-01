@@ -12,8 +12,10 @@ hostname = %APPEND% *.hdslb.com,app.bilibili.com,api.live.bilibili.com,api.vc.bi
 
 #UPOS服务器替换为腾讯Cos对象存储
 ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net\/(.*) https://upos-sz-mirrorcos.bilivideo.com/$1 302
+
 # ～ BiliBili_哔哩哔哩_屏蔽IP请求@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+
 # ～ BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default - reject
 
@@ -51,9 +53,6 @@ bilibili_json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\
 # ～ BiliBili_哔哩哔哩_我的页面处理@ddgksf2013
 bilibili_json = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,max-size=3145728,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,script-update-interval=0
 
-# ～ BiliBili_哔哩哔哩_1080P高码率+4K画质(番剧和影视除外)@ddgksf2013
-bilibili_json = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,max-size=3145728,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,script-update-interval=0
-
 # ～ BiliBili_哔哩哔哩_热搜发现@ddgksf2013
 bilibili_json = type=http-response,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,max-size=3145728,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,script-update-interval=0
 
@@ -71,6 +70,3 @@ bilibili_json = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/re
 
 # ～ BiliBili_哔哩哔哩_Proto去广告@app2smile
 bilibili_proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,max-size=3145728,binary-body-mode=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js,script-update-interval=0
-
-# ～ BiliBili_哔哩哔哩_繁体CC字幕转中文简体@ddgksf2013
-bilibili_cc = type=http-response,pattern=^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$,requires-body=1,max-size=3145728,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_cc.js,script-update-interval=0
